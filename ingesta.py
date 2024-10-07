@@ -13,7 +13,7 @@ def cargar_a_s3(data):
     with open('/tmp/datos_usuarios.csv', 'w') as f:
         for doc in data:
             f.write(','.join(map(str, doc.values())) + '\n')
-    s3.upload_file('/tmp/datos_usuarios.csv', 'tu_bucket_s3', 'datos_usuarios.csv')
+    s3.upload_file('/tmp/datos_usuarios.csv', 'proyecto-parcial', 'datos_usuarios.csv')
 
 if __name__ == "__main__":
     datos = obtener_datos()
